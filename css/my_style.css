@@ -4,6 +4,7 @@
   src: url("font/TheNautigal-Regular.ttf");
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=The+Nautigal:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
 /* start variable */
 :root{
   --main-color:#10cab7;
@@ -12,6 +13,10 @@
   --section-background: #f6f6f6;
 }
 /* end variable */
+
+
+
+/* start components */
 .container{
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +24,6 @@
   padding-right: 150px;
 }
 
-/* start components */
 .special-heading{
   color: #ebeced;
   font-size: 100px;
@@ -46,6 +50,7 @@
 }
 
 /* end components */
+/* start nav bar */
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -104,12 +109,11 @@
     }
   }
 
+/* end nav bar */
 
-
-  /* ************** */
+  /* start home section */
   .home .container{
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); */
     grid-template-columns: auto auto;
     grid-gap: 20px;
   }
@@ -143,11 +147,11 @@
     font-size: 18px;
   }
   
-  .card a {
+  .card i {
     text-decoration: none;
     font-size: 22px;
     color: black;
-    background-color: black;
+    padding-right: 30px;
    
   }
   button:hover, a:hover {
@@ -160,7 +164,9 @@
     font-size: 20px;
     margin-bottom: 100px;
   }
+/* end home section */
 
+/* start about section */
 
   .about-content{
     display: flex;
@@ -188,19 +194,33 @@
 /* Container for skill bars */
 .skill {
   background-color: #ddd; /* Grey background */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .skills {
   text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
+  padding-top: 2px; /* Add top padding */
+  padding-bottom: 2px; /* Add bottom padding */
   color: white; /* White text color */
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 
 }
 
-.html {width: 90%; background-color: #04AA6D;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
+.html {
+  width: 90%; background-color: #2196F3;
+}
+.css {
+  width: 80%; background-color: #2196F3;
+} 
+.js {
+  width: 65%; background-color: #2196F3;
+} 
+.php {
+  width: 60%; background-color: #2196F3;
+} 
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
@@ -228,7 +248,7 @@
   overflow: hidden;
   background-color: #f1f1f1;
 }
-
+/* end about section */
 
 /* start services */
  .services{
@@ -253,7 +273,7 @@
     }
  }
  .services .services-content i{
-     color: purple;
+     color: #2196F3;
      flex-basis: 60px;
 
  }
@@ -271,11 +291,12 @@
      line-height: 1.6;
 
  }
- /* start previoue-works */
+
  .previoue-works{
-    padding-top: var(--padding);
-    padding-bottom:  var(--padding);
-    background-color: var( --section-background);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+   padding: var(--padding);
+   
 }
 .previoue-works .works-content{
     display: grid;
@@ -302,15 +323,14 @@
     color: #777;
     line-height: 1.6;
 }
-/* end previoue-works */
+
 
  /* end services */
 
- * start contact */
+ /* start contact */
 .contact{
     padding-top: var(--padding);
     padding-bottom:  var(--padding);
-    background-color: var( --section-background);
 
 }
 
@@ -348,6 +368,7 @@
 }
 
 /* end contact */
+/* start footer */
 
 .footer {
   position: fixed;
@@ -358,3 +379,5 @@
   color: white;
   text-align: center;
 }
+
+/* end footer */
