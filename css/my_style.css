@@ -482,8 +482,8 @@ input[type=submit]{
   flex-direction: column;
   margin-left: 50px;
 }
-.container .social i{
-  margin-left: 30px;
+.container .social a i{
+  margin-left: 20px;
  
 }
 
