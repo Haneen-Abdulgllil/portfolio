@@ -17,6 +17,12 @@
 
 
 /* start components */
+#fixedbutton {
+  position: fixed;
+  bottom: 50px;
+  right:0; ; 
+}
+
 .container{
   margin-left: auto;
   margin-right: auto;
@@ -57,6 +63,7 @@
     overflow: hidden;
     margin-top: 50px;
     margin-bottom: 100px;
+    
   }
   
   /* Style the links inside the navigation bar */
@@ -329,41 +336,74 @@
  /* end services */
 
  /* start contact */
-.contact{
-    padding-top: var(--padding);
-    padding-bottom:  var(--padding);
-
+ .contact{
+   margin-bottom: 100px;
+ }
+ .contact_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 15vh auto;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* background-color: gray; */
 }
 
-.contact .info{
-    padding-top: var(--padding);
-    padding-bottom:  var(--padding);
-    text-align: center;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
 }
 
-.contact .info .lable{
-    font-size: 30px;
-    font-weight: 800;
-    color: var( --secondary-color);
-    letter-spacing: -2px;
-    margin-bottom: 15px;
+input {
+  width: 100%;
+  margin: 5px 0;
+  height: 35px;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  background: rgb(235, 228, 228);
 }
 
-.contact .info .link{
-    display: block;
-    font-size: 30px;
-    font-weight: 800px;
-    color: var(--main-color);
-    text-decoration: none;
+textarea {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  background: rgb(235, 228, 228);
+}
+input[type=submit]{
+  margin: 10px auto;
+  width: 120px;
+  background: rgb(216, 31, 62);
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+background: tomato;
+}
+@media screen and (max-width:600px) {
+  .contact_content{
+      width: 90%;
+  }
 }
 
-.contact .info .social{
+.container .social{
     display: flex;
     justify-content: center;
     margin-top: 20px;
     font-size: 16px;
 }
-.contact .info .social i{
+ .container .social i{
     margin-left: 10px;
     color: var(--secondary-color);
 }
