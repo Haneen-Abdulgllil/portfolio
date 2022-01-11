@@ -1,16 +1,6 @@
 
-@font-face{
-  font-family: TheNautigal-Regularr ; 
-  src: url("font/TheNautigal-Regular.ttf");
-}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=The+Nautigal:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
-/* start variable */
-:root{
-  --padding: 60px;
-  --section-background: #f6f6f6;
-}
-/* end variable */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=The+Nautigal:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 
 
@@ -18,7 +8,7 @@
 #fixedbutton {
   position: fixed;
   bottom: 50px;
-  right:0; ; 
+  right:30px;
 }
 
 .container{
@@ -44,14 +34,36 @@
   color: #797979;
   
 }
-@media (max-width: 767px){
+.sub-title{
+  color: #777;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+@media (max-width: 600px){
   .special-heading{
       font-size: 50px;
+
   }
   .special-heading + p{
       margin: -20px;
+      font-size: 12px;  
+  }
+  .sub-title{
+      font-size: 20px;
+      padding-top: 20px;
+ 
+  }
+  .container{
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
+
 
 /* end components */
 /* start nav bar */
@@ -79,19 +91,18 @@
     
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     color: #777;
     text-decoration: underline;
 
   }
   
-  /* Hide the link that should open and close the topnav on small screens */
+
   .topnav .icon {
     display: none;
   }
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+ 
+@media screen and (max-width: 1200px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -99,8 +110,8 @@
     }
   }
   
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  
+  @media screen and (max-width: 1200px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -117,16 +128,14 @@
 /* end nav bar */
 
   /* start home section */
+
   .home .container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 20px;
     margin-bottom: 30px;
   }
-  .home .intro{
-    padding: 20px;
-    text-align: center;
-  }
+ 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -140,36 +149,40 @@
     font-size: 18px;
   }
   
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
+
   
   .card i {
     text-decoration: none;
     font-size: 22px;
     color: black;
     padding-right: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
    
   }
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+
   .home .intro .info{
-    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
     color: #777;
     line-height: 1.6;
     font-size: 20px;
     margin-bottom: 100px;
   }
+
+@media screen and (max-width:600px){
+  .home .intro .info{
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+
+}
+
 /* end home section */
 
 /* start about section */
@@ -186,30 +199,23 @@
     width: 100%;
    
   }
-  .sub-title{
-    color: #777;
-  font-size: 35px;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: -3px;
-  margin: 0;
-  }
+
   /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-/* Container for skill bars */
+
 .skill {
-  background-color: #ddd; /* Grey background */
+  background-color: #ddd; 
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
  
 }
 
 .skills {
-  text-align: right; /* Right-align text */
-  padding-top: 2px; /* Add top padding */
-  padding-bottom: 2px; /* Add bottom padding */
-  color: white; /* White text color */
+  text-align: right; 
+  padding-top: 2px;
+  padding-bottom: 2px; 
+  color: white; 
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -243,12 +249,11 @@
  
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Add a background color */
 .active, .collapsible:hover {
   background-color: #ccc;
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
   display: none;
@@ -257,14 +262,17 @@
 }
 /* end about section */
 
+
+
 /* start services */
+
  .services{
      padding-top: 60px;
      padding-bottom:60px;
  }
  .services .services-content{
      display: grid;
-     grid-template-columns: auto auto;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
      grid-gap: 20px;
      margin-top: 70px;
    
@@ -274,12 +282,7 @@
      display: flex;
      margin-bottom: 40px;
  }
- @media (max-width: 797px){
-    .services .services-content .srv{
-        flex-direction: column;
-        text-align: center;
-    }
- }
+
  .services .services-content i{
      color: #2196F3;
      flex-basis: 60px;
@@ -303,12 +306,12 @@
  .previoue-works{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
-   padding: var(--padding);
+    padding: 40px;
    
 }
 .previoue-works .works-content{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 20px;
     margin-top: 0px; 
     margin-bottom: 0px;
@@ -333,6 +336,17 @@
     line-height: 1.6;
 }
 
+@media screen and (max-width:600px){
+  .previoue-works{
+    width: fit-content;
+    padding: 0;
+  
+  }
+  .services .services-content .srv{
+    flex-direction: column;
+    text-align: center;
+}
+}
 
  /* end services */
 
@@ -350,7 +364,7 @@
   border-radius: 15px;
   border: none;
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* background-color: gray; */
+ 
 }
 
 form {
@@ -388,27 +402,93 @@ input[type=submit]{
   width: 90%;
   background-color: #2196F3;
   color: white;
+  position: relative;
+  animation-name: shake;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
+}
+
+@keyframes shake {
+  0% {left: 0}
+  1% {left: -3px}
+  2% {left: 5px}
+  3% {left: -8px}
+  4% {left: 8px}
+  5% {left: -5px}
+  6% {left: 3px}
+  7% {left: 0}
 }
 input[type=submit]:hover{
 background:lightblue;
+
 }
-@media screen and (max-width:600px) {
-  .contact_content{
-      width: 90%;
-  }
-}
+
+
+
 
 .container .social{
     display: flex;
     justify-content: center;
     margin-top: 20px;
     font-size: 16px;
+    flex-direction: column;
+    margin-left: 430px;
 }
  .container .social i{
-    margin-left: 10px;
-    color: var(--secondary-color);
+    margin-left: 22px;
+    font-size: 30px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+
+   
 }
+
+@media screen and (max-width:600px) {
+
+  h2{
+    font-size: 10px;
+  }
+  .contact_content{
+      width: 200px;
+    
+  }
+  
+input {
+ height: 15px;
+  font-size: 10px;
+
+}
+
+textarea {
+
+  font-size: 10px;
+}
+input[type=submit]{
+  font-size: 10px;
+  width: 70%;
+  
+
+}
+.container .social{
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.container .social i{
+  margin-left: 30px;
+ 
+}
+
+}
+
 
 /* end contact */
 /* start footer */
@@ -416,6 +496,7 @@ background:lightblue;
 .footer {
   position: fixed;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   background-color: black;
