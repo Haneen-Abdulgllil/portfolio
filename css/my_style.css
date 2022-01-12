@@ -444,6 +444,7 @@ background:lightblue;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
+    color: black;
 
 
    
@@ -483,7 +484,7 @@ input[type=submit]{
   margin-left: 50px;
 }
 .container .social i{
-  margin-left: 30px;
+  margin-left: 20px;
  
 }
 
