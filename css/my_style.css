@@ -571,7 +571,7 @@
       flex-direction: column;
       margin-left: 430px;
   }
-<<<<<<< HEAD
+
   
 input {
  height: 15px;
@@ -596,14 +596,12 @@ input[type=submit]{
   flex-direction: column;
   margin-left: 50px;
 }
-<<<<<<< HEAD
+ 
 .container .social a i{
-=======
-.container .social i{
->>>>>>> details
+
+
   margin-left: 20px;
-=======
->>>>>>> details
+}
  
    .container .social i{
       margin-left: 22px;
