@@ -11,6 +11,8 @@
 
 <body>
         <a href="#head"><img src="img/upbutton.png" id="fixedbutton" style="width: 50px; height:50px;" ></a>
+        
+        <button class="DL" onclick="DarkLightMode()"><img src="img/DL.png"></button>
 
         <!-- start nav section -->
 
@@ -207,25 +209,40 @@
 
                                 <div class="works-content">
                                         <div class="card1">
-                                            <img src="img/2.jpg" alt="">
+                                                <figure id="figure" class="effect">
+                                                        <img src="img/2.jpg" alt="sample33" />
+                                                        <figcaption>
+                                                          <h2>Digital  <span> Photographer</span></h2>
+                                                        </figcaption>
+                                                </figure>
                                             <div class="info">
-                                                 <h3>Digital Photographer</h3>
+                                                
                                             <p>Build  digital Photographer using WordPress with hight quality images and fast load. </p>
                         
                                             </div>
                                         </div>
                                         <div class="card1">
-                                            <img src="img/1.jpg" alt="">
+                                                <figure class="effect">
+                                                        <img src="img/1.jpg" alt="sample33" />
+                                                        <figcaption>
+                                                          <h2>e-commerce  <span> store</span></h2>
+                                                        </figcaption>
+                                                </figure>
                                             <div class="info">
-                                                    <h3>e-commerce store</h3>
+                                                
                                             <p>Build e-commerce store using WordPress with high-level sequrity and huge amount of products.</p>
                         
                                             </div>
                                          </div>
                                             <div class="card1">
-                                            <img src="img/img4.jpg" alt="">
+                                                    <figure class="effect">
+                                                            <img src="img/img4.jpg" alt="sample33" />
+                                                            <figcaption>
+                                                              <h2>Coffee  <span>shop </span></h2>
+                                                            </figcaption>
+                                                    </figure>
                                             <div class="info">
-                                                    <h3>Coffee shop</h3>
+                                                    
                                             <p>Build coffee shop website using prue css and html and javascript.</p>
                         
                                             </div>
@@ -252,11 +269,29 @@
             <p>We are born to create </p>
             <div class="contact_content">
                 <h2>Write Us</h2>
-                <form action="">
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
-                    <input type="text" name="name" id="name" placeholder=" Enter your name">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here"></textarea>
-                    <input type="submit" value="Send">
+    
+                <form id="form" action="">
+                    <div class="input-control">
+                       
+                        <input id="username" name="username" type="text"  placeholder=" Enter your name">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                      
+                        <input id="email" name="email" type="text" placeholder="Enter your email">
+                        <div class="error"></div>
+                    </div>
+                    
+        
+                    <div class="input-control">
+                        
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                        <div class="error"></div>
+                    </div> 
+                    
+                        <button type="submit">Sign Up</button>
+                   
+                 
                 </form>
             </div>
 
@@ -283,7 +318,7 @@
     <!-- start footer section -->
     <div class="footer">
             <p>copy right &copy Haneen 2022</p>
-          </div>
+    </div>
 
           <!-- end footer section -->
 
@@ -317,6 +352,10 @@
         }
     </script>
     <!-- end script section -->
+
+    <script src="js/app.js"></script>
+
+
 
 </body>
 
