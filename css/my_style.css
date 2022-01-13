@@ -60,6 +60,7 @@
 }
 
 /* end components */
+
 /* start nav bar */
 
 /* Add a black background color to the top navigation */
@@ -326,10 +327,6 @@
     margin-top: 0px; 
     margin-bottom: 0px;
 }
-.portprevioue-worksifolio .works-content .card1{
-    background-color: white;
-
-}
 
 .previoue-works .works-content .card1 img{
     max-width: 100%;
@@ -338,9 +335,7 @@
 .previoue-works .works-content .card1 .info{
     padding: 20px;
 }
-.previoue-works .works-content .card1 .info h3{
-    margin: 0;
-}
+
 .previoue-works .works-content .card1 .info p{
     color: #777;
     line-height: 1.6;
@@ -572,29 +567,13 @@
       margin-left: 430px;
   }
 
-  
-input {
- height: 15px;
-  font-size: 10px;
 
-}
-
-textarea {
-
-  font-size: 10px;
-}
-input[type=submit]{
-  font-size: 10px;
-  width: 70%;
-  
-
-}
 .container .social{
   margin-top: 20px;
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  margin-left: 450px;
+  margin-left: 410px;
 }
  
 .container .social a i{
@@ -673,7 +652,7 @@ input[type=submit]{
   position: fixed;
   
 }
-button img{
+  button img{
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -687,6 +666,9 @@ button img{
 
 .dark .topnav a{
   color: white;
+}
+.dark .intro .card img{
+  border-radius: 50%;
 }
 .dark button{
   background-color: white;
