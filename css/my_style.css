@@ -1,9 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=The+Nautigal:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
-
-
-
 /* start components */
 #fixedbutton {
   position: fixed;
@@ -42,7 +37,7 @@
   letter-spacing: -3px;
   margin: 0;
 }
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
   .special-heading{
       font-size: 50px;
 
@@ -63,7 +58,6 @@
     padding-right: 50px;
   }
 }
-
 
 /* end components */
 /* start nav bar */
@@ -170,13 +164,13 @@
     text-decoration: none;
     font-size: 22px;
     color: black;
-    padding-right: 30px;
     padding-bottom: 30px;
     position: relative;
     animation-name: shake;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
+    padding: 15px;
    
   }
 
@@ -238,16 +232,16 @@
 }
 
 .html {
-  width: 90%; background-color: #2196F3;
+  width: 90%; background-color: rgb(73, 74, 75);
 }
 .css {
-  width: 80%; background-color: #2196F3;
+  width: 80%; background-color: rgb(73, 74, 75);
 } 
 .js {
-  width: 65%; background-color: #2196F3;
+  width: 65%; background-color: rgb(73, 74, 75);
 } 
 .php {
-  width: 60%; background-color: #2196F3;
+  width: 60%; background-color: rgb(73, 74, 75);
 } 
 
 /* Style the button that is used to open and close the collapsible content */
@@ -274,6 +268,7 @@
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  color: #777
 }
 /* end about section */
 
@@ -299,7 +294,7 @@
  }
 
  .services .services-content i{
-     color: #2196F3;
+     color: rgb(73, 74, 75);
      flex-basis: 60px;
 
  }
@@ -312,7 +307,7 @@
 
  }
  .services .services-content p{
-     color: #444;
+     color: #777;
      font-weight: 300px;
      line-height: 1.6;
 
@@ -351,6 +346,84 @@
     line-height: 1.6;
 }
 
+            /* start image effect */
+            .effect {
+
+              position: relative;
+              overflow: hidden;
+              margin: 10px;
+              min-width: 220px;
+              max-width: 310px;
+              max-height: 220px;
+              background: #000000;
+              color: #ffffff;
+              text-align: center;
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            }
+          
+           .effect img {
+              max-width: 100%;
+              position: relative;
+              opacity: 0.4;
+            }
+          
+           .effect figcaption {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+            }
+          
+            
+          .effect h2 {
+              position: absolute;
+              left: 40px;
+              right: 40px;
+              display: inline-block;
+              background: #444;
+              transform: skew(-5deg) rotate(-5deg) translate(0, -50%);
+              padding: 6px 3px;
+              top: 50%;
+              font-weight: 200;
+              border-radius: 40px;
+            }
+            
+          
+          
+          .effect:before {
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              content: '';
+              background: #ffffff;
+              position: absolute;
+              transition: all 0.3s ease-in-out;
+              -webkit-transform: rotate(110deg) translateY(-50%);
+              transform: rotate(110deg) translateY(-50%);
+            }
+          /*  */
+            
+          
+            .effect:hover img,
+            .effect.hover img {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+          
+          .effect:hover h2,
+          .effect.hover h2 {
+            transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+          }
+          
+          .effect:hover:before,
+          .effect.hover:before {
+            transform: rotate(110deg) translateY(-150%);
+          }
+          
+            /* end image effects */
+
 @media screen and (max-width:600px){
   .previoue-works{
     width: fit-content;
@@ -366,147 +439,183 @@
  /* end services */
 
  /* start contact */
- .contact{
-   margin-bottom: 100px;
+  .contact{
+    margin-bottom: 70px;
  }
  .contact_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 500px;
-  margin: 15vh auto;
-  padding: 15px;
-  border-radius: 15px;
-  border: none;
-  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
- 
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-}
-
-input {
-  width: 100%;
-  margin: 5px 0;
-  height: 35px;
-  font-size: 17px;
-  text-align: center;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  background: lightgray;
-}
-
-textarea {
-  width: 100%;
-  margin: 5px 0;
-  font-size: 17px;
-  text-align: center;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  background: lightgray;
-}
-input[type=submit]{
-  margin: 10px auto;
-  width: 120px;
-  width: 90%;
-  background-color: #2196F3;
-  color: white;
-  position: relative;
-  animation-name: shake;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-
-}
-
-@keyframes shake {
-  0% {left: 0}
-  1% {left: -3px}
-  2% {left: 5px}
-  3% {left: -8px}
-  4% {left: 8px}
-  5% {left: -5px}
-  6% {left: 3px}
-  7% {left: 0}
-}
-input[type=submit]:hover{
-background:lightblue;
-
-}
-
-
-
-
-.container .social{
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 16px;
     flex-direction: column;
-    margin-left: 430px;
-}
- .container .social i{
-    margin-left: 22px;
-    font-size: 30px;
-    position: relative;
-    animation-name: shake;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    color: black;
-
-
-   
+    align-items: center;
+    width: 600px;
+    margin: 15vh auto;
+    border-radius: 15px;
+    border: none;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px;
+  
 }
 
-@media screen and (max-width:600px) {
+     /* start contact validation style */
 
-  h2{
-    font-size: 10px;
-  }
-  .contact_content{
-      width: 200px;
+    #form {
+      width: 500px;
+      margin: 5vh auto 0 auto;
+      margin-top: 10px;
+      border-radius: 4px;
+      font-size: 15px;
+
+    }
+    @media screen and (max-width:600px){
+      #form{
+          width: 250px;
+      }
+
+    }
+
+
+    h2 {
+      text-align: center;
+    }
+
+    #form button {
+      padding: 10px;
+      width: 15%;
+      color: white;
+      background-color: #777;
+      border: none;
+      border-radius: 10px;
+      margin-left: 40%;
+      height: 40px;
+      margin-top: 10px;
     
+    }
+
+    #form button:hover{
+      position: relative;
+      animation-name: shake;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      background-color: rgb(120, 131, 134);
+
+    }
+
+    @keyframes shake {
+      0% {left: 0}
+      1% {left: -3px}
+      2% {left: 5px}
+      3% {left: -8px}
+      4% {left: 8px}
+      5% {left: -5px}
+      6% {left: 3px}
+      7% {left: 0}
+    }
+
+    .input-control {
+      display: flex;
+      flex-direction: column;
+      color: black;
+    }
+
+
+    .input-control input {
+      background-color: lightgray; 
+      border: 2px solid #f0f0f0;
+      border-radius: 20px;
+      display: block;
+      font-size: 12px;
+      padding: 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .input-control.success input {
+      border-color: #09c372;
+    }
+
+    .input-control.error input {
+      border-color: #ff3860;
+    }
+
+    .input-control textarea {
+      background-color: lightgray; 
+      border: 2px solid #f0f0f0;
+      border-radius: 20px;
+      display: block;
+      font-size: 12px;
+      padding: 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .input-control.success textarea {
+      border-color: #09c372;
+    }
+
+    .input-control.error textarea {
+      border-color: #ff3860;
+    }
+
+    .input-control .error {
+      color: #ff3860;
+      font-size: 12px;
+      height: 13px;
+    }
+    /* end validation style */
+
+    .container .social{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 16px;
+      flex-direction: column;
+      margin-left: 430px;
   }
-  
-input {
- height: 15px;
-  font-size: 10px;
-
-}
-
-textarea {
-
-  font-size: 10px;
-}
-input[type=submit]{
-  font-size: 10px;
-  width: 70%;
-  
-
-}
-.container .social{
-  margin-top: 20px;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-}
-.container .social i{
-  margin-left: 20px;
  
-}
+   .container .social i{
+      margin-left: 22px;
+      font-size: 30px;
+      position: relative;
+      animation-name: shake;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      color: black;
+  
+  
+   }
 
-}
+   @media screen and (max-width:600px) {
+
+    h2{
+      font-size: 20px;
+    }
+    .contact_content{
+       max-width: 100%;
+      
+    }
+    .container .social{
+      margin: 50px;
+    }
+    .container .social p{
+      text-align: center;
+      font-size: 15px;
+    }
+    .container .social i{
+      font-size: 20px;
+    }
+    #form button{
+      width: 30%;
+      margin-left: 30%;
+    }
+  }
 
 
-/* end contact */
+  
+
+/* end contact section */
+
+
 /* start footer */
 
 .footer {
@@ -521,3 +630,46 @@ input[type=submit]{
 }
 
 /* end footer */
+
+/*start dark mode */
+
+.DL{
+  width: 30px;
+  height:30px;
+  border-radius: 50%;
+  background-color: black;
+  margin-left: 20px;
+  margin-top: 6px;
+  position: fixed;
+  
+}
+button img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+
+}
+
+.dark{
+  background-color: black;
+  color: white;
+}
+
+.dark .topnav a{
+  color: white;
+}
+.dark button{
+  background-color: white;
+}
+.dark .footer{
+  background-color: rgb(185, 184, 184);
+  color: black;
+}
+.dark  .card i{
+  color: #797979;
+}
+
+.dark .container .social i{
+  color: #797979;
+}
+/* end dark mode */
